@@ -7,20 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C58FB3E2B5408FE00118EF1 /* PasscodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C58FB3D2B5408FE00118EF1 /* PasscodeView.swift */; };
+		5C58FB422B54096800118EF1 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C58FB412B54096800118EF1 /* Builder.swift */; };
+		5C58FB452B540BA700118EF1 /* PasscodePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C58FB442B540BA700118EF1 /* PasscodePresenter.swift */; };
+		5C58FB482B54262000118EF1 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C58FB472B54262000118EF1 /* UIView.swift */; };
+		5C58FB4B2B54678000118EF1 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C58FB4A2B54678000118EF1 /* KeychainManager.swift */; };
+		5C58FB4E2B54FEB400118EF1 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 5C58FB4D2B54FEB400118EF1 /* KeychainAccess */; };
+		5C58FB502B55032700118EF1 /* StringProtocol.ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C58FB4F2B55032700118EF1 /* StringProtocol.ext.swift */; };
 		5CD42FB72B4F2AED0073E1BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD42FB62B4F2AED0073E1BC /* AppDelegate.swift */; };
 		5CD42FB92B4F2AED0073E1BC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD42FB82B4F2AED0073E1BC /* SceneDelegate.swift */; };
-		5CD42FBB2B4F2AED0073E1BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD42FBA2B4F2AED0073E1BC /* ViewController.swift */; };
-		5CD42FBE2B4F2AED0073E1BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CD42FBC2B4F2AED0073E1BC /* Main.storyboard */; };
 		5CD42FC02B4F2AEE0073E1BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CD42FBF2B4F2AEE0073E1BC /* Assets.xcassets */; };
 		5CD42FC32B4F2AEE0073E1BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CD42FC12B4F2AEE0073E1BC /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5C58FB3D2B5408FE00118EF1 /* PasscodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeView.swift; sourceTree = "<group>"; };
+		5C58FB412B54096800118EF1 /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
+		5C58FB442B540BA700118EF1 /* PasscodePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodePresenter.swift; sourceTree = "<group>"; };
+		5C58FB472B54262000118EF1 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		5C58FB4A2B54678000118EF1 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		5C58FB4F2B55032700118EF1 /* StringProtocol.ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringProtocol.ext.swift; sourceTree = "<group>"; };
 		5CD42FB32B4F2AED0073E1BC /* iOSDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CD42FB62B4F2AED0073E1BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5CD42FB82B4F2AED0073E1BC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5CD42FBA2B4F2AED0073E1BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5CD42FBD2B4F2AED0073E1BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5CD42FBF2B4F2AEE0073E1BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5CD42FC22B4F2AEE0073E1BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5CD42FC42B4F2AEE0073E1BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -31,12 +40,91 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C58FB4E2B54FEB400118EF1 /* KeychainAccess in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C58FB392B54081600118EF1 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				5C58FB3A2B54084600118EF1 /* PasscodeModule */,
+				5CD42FBF2B4F2AEE0073E1BC /* Assets.xcassets */,
+				5CD42FC12B4F2AEE0073E1BC /* LaunchScreen.storyboard */,
+				5CD42FC42B4F2AEE0073E1BC /* Info.plist */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		5C58FB3A2B54084600118EF1 /* PasscodeModule */ = {
+			isa = PBXGroup;
+			children = (
+				5C58FB3C2B54088600118EF1 /* Model */,
+				5C58FB3B2B54085D00118EF1 /* View */,
+				5C58FB3F2B54090F00118EF1 /* Presenter */,
+			);
+			path = PasscodeModule;
+			sourceTree = "<group>";
+		};
+		5C58FB3B2B54085D00118EF1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5C58FB3D2B5408FE00118EF1 /* PasscodeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5C58FB3C2B54088600118EF1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5C58FB3F2B54090F00118EF1 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				5C58FB442B540BA700118EF1 /* PasscodePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		5C58FB402B54094900118EF1 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				5C58FB412B54096800118EF1 /* Builder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		5C58FB432B540A8600118EF1 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				5CD42FB62B4F2AED0073E1BC /* AppDelegate.swift */,
+				5CD42FB82B4F2AED0073E1BC /* SceneDelegate.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		5C58FB462B54260300118EF1 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				5C58FB472B54262000118EF1 /* UIView.swift */,
+				5C58FB4F2B55032700118EF1 /* StringProtocol.ext.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		5C58FB492B54676100118EF1 /* KeychainManager */ = {
+			isa = PBXGroup;
+			children = (
+				5C58FB4A2B54678000118EF1 /* KeychainManager.swift */,
+			);
+			path = KeychainManager;
+			sourceTree = "<group>";
+		};
 		5CD42FAA2B4F2AED0073E1BC = {
 			isa = PBXGroup;
 			children = (
@@ -56,13 +144,11 @@
 		5CD42FB52B4F2AED0073E1BC /* iOSDev */ = {
 			isa = PBXGroup;
 			children = (
-				5CD42FB62B4F2AED0073E1BC /* AppDelegate.swift */,
-				5CD42FB82B4F2AED0073E1BC /* SceneDelegate.swift */,
-				5CD42FBA2B4F2AED0073E1BC /* ViewController.swift */,
-				5CD42FBC2B4F2AED0073E1BC /* Main.storyboard */,
-				5CD42FBF2B4F2AEE0073E1BC /* Assets.xcassets */,
-				5CD42FC12B4F2AEE0073E1BC /* LaunchScreen.storyboard */,
-				5CD42FC42B4F2AEE0073E1BC /* Info.plist */,
+				5C58FB492B54676100118EF1 /* KeychainManager */,
+				5C58FB462B54260300118EF1 /* Extension */,
+				5C58FB402B54094900118EF1 /* Builder */,
+				5C58FB432B540A8600118EF1 /* Common */,
+				5C58FB392B54081600118EF1 /* Module */,
 			);
 			path = iOSDev;
 			sourceTree = "<group>";
@@ -83,6 +169,9 @@
 			dependencies = (
 			);
 			name = iOSDev;
+			packageProductDependencies = (
+				5C58FB4D2B54FEB400118EF1 /* KeychainAccess */,
+			);
 			productName = iOSDev;
 			productReference = 5CD42FB32B4F2AED0073E1BC /* iOSDev.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +200,9 @@
 				Base,
 			);
 			mainGroup = 5CD42FAA2B4F2AED0073E1BC;
+			packageReferences = (
+				5C58FB4C2B54FEB400118EF1 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+			);
 			productRefGroup = 5CD42FB42B4F2AED0073E1BC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +219,6 @@
 			files = (
 				5CD42FC32B4F2AEE0073E1BC /* LaunchScreen.storyboard in Resources */,
 				5CD42FC02B4F2AEE0073E1BC /* Assets.xcassets in Resources */,
-				5CD42FBE2B4F2AED0073E1BC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +229,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CD42FBB2B4F2AED0073E1BC /* ViewController.swift in Sources */,
+				5C58FB3E2B5408FE00118EF1 /* PasscodeView.swift in Sources */,
 				5CD42FB72B4F2AED0073E1BC /* AppDelegate.swift in Sources */,
+				5C58FB4B2B54678000118EF1 /* KeychainManager.swift in Sources */,
+				5C58FB502B55032700118EF1 /* StringProtocol.ext.swift in Sources */,
 				5CD42FB92B4F2AED0073E1BC /* SceneDelegate.swift in Sources */,
+				5C58FB422B54096800118EF1 /* Builder.swift in Sources */,
+				5C58FB482B54262000118EF1 /* UIView.swift in Sources */,
+				5C58FB452B540BA700118EF1 /* PasscodePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		5CD42FBC2B4F2AED0073E1BC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5CD42FBD2B4F2AED0073E1BC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5CD42FC12B4F2AEE0073E1BC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,7 +380,6 @@
 				INFOPLIST_FILE = iOSDev/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -320,7 +407,6 @@
 				INFOPLIST_FILE = iOSDev/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -358,6 +444,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5C58FB4C2B54FEB400118EF1 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5C58FB4D2B54FEB400118EF1 /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5C58FB4C2B54FEB400118EF1 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5CD42FAB2B4F2AED0073E1BC /* Project object */;
 }
