@@ -10,7 +10,7 @@ import UIKit
 class ViewController: UIViewController, UITextFieldDelegate {
     
     var regBtns: UIButton = UIButton()
-    
+     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(red: 8/255, green: 83/255, blue: 138/255, alpha: 1)
