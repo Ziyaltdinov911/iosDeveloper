@@ -11,4 +11,4 @@ class MainPostCell: UICollectionViewCell {
     
     static let reuseId = "MainPostCell"
     
-}
+ }

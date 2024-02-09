@@ -17,47 +17,43 @@ class PostDate: Identifiable {
         self.date = date
     }
     
-    static getMackData() -> [PostDate] {
+    static func getMockData() -> [PostDate] {
         [
-        
-            PostDate items: [
-            PostItem (photos: ["'img1",
-            "img2"], comments: nil, tags: ["Дом", "Nature"],
-            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit", isFavorite: false),
-            PostItem(photos: ["img3"], comments: nil, tags: ["Nature", "Home", "Education"
-            "Work"
-            "Game"], description: "tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam", isFavorite: false),
-            PostItem (photos: ["img3"],
-            "Work"
-            comments: nil, tags: ["Nature", "Home", "Education"
-            "Game"], description: "tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam" , isFavorite: false)
-            J, date: Date()), PostDate (items: [
-            PostItem(photos: ["'img2"], comments: nil, tags: ["Nature", "Home", "Education"
-            "Work" veniam",
-            "Game"], description: "labore et dolore magna aliqua. Ut enim ad minim , isFavorite: false),
-            PostItem (photos: ["img3"], comments: nil, tags: ["Nature", "Home",
-            "Education"
-            "Work"
-            "Game"], description: "Ut enim ad minim veniam tempor incididunt ut labore et dolore magna aliqua" 1, date: Date() . addingTimeInterval(-86400)),
-            isfavorite: false),
-            PostDate (items: [
-            PostItem (photos: (" img2",
-            "Education"
-            "Work"
-            "img3"], comments: nil, tags: ["Nature", "Home",
-            isFavorite: false),
-            "Game"], description: "labore et dolore magna aliqua"
-            PostItem(photos: [" img3"], comments: nil, tags: ['Nature", "Home"
-            "Education"
-            1
-            "Work"
-            "Game"], description:
-            "labore et veniam tempor incididunt ut labore et
-            dolore magna aliqua dolore magna aliqua" , isFavorite: false), date: Date ).addingTimeInterval (-172800))
-            
+            PostDate(items: [
+                PostItem(photos: ["img1", "img2"],
+                         comments: nil,
+                         tags: ["Дом", "Nature"],
+                         description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit"),
+                PostItem(photos: ["img3"],
+                         comments: nil,
+                         tags: ["Nature", "Home", "Education", "Work", "Game"],
+                         description: "tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"),
+                PostItem(photos: ["img3"],
+                         comments: nil,
+                         tags: ["Nature", "Home", "Education", "Game"],
+                         description: "tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"),
+            ], date: Date()),
+            PostDate(items: [
+                PostItem(photos: ["img2"],
+                         comments: nil,
+                         tags: ["Nature", "Home", "Education", "Work", "Game"],
+                         description: "labore et dolore magna aliqua. Ut enim ad minim veniam"),
+                PostItem(photos: ["img3"],
+                         comments: nil,
+                         tags: ["Nature", "Home", "Education", "Work", "Game"],
+                         description: "Ut enim ad minim veniam tempor incididunt ut labore et dolore magna aliqua"),
+            ], date: Date().addingTimeInterval(-86400)),
+            PostDate(items: [
+                PostItem(photos: ["img2", "img3"],
+                         comments: nil,
+                         tags: ["Nature", "Home", "Education", "Work", "Game"],
+                         description: "labore et dolore magna aliqua"),
+                PostItem(photos: ["img3"],
+                         comments: nil,
+                         tags: ["Nature", "Home", "Education", "Work", "Game"],
+                         description: "Ut enim ad minim veniam tempor incididunt ut labore et dolore magna aliqua")
+            ], date: Date().addingTimeInterval(-172800))
         ]
-        
     }
 }
 
@@ -65,14 +61,14 @@ class PostItem: Identifiable {
     let id = UUID().uuidString
     let photos: [String]
     let comments: [Comment]?
-    let tag: [String]?
+    let tags: [String]?
     let description: String?
     let isFavorite: Bool = false
     
-    init(photos: [String], comments: [Comment]?, tag: [String]?, description: String?) {
+    init(photos: [String], comments: [Comment]?, tags: [String]?, description: String?) {
         self.photos = photos
         self.comments = comments
-        self.tag = tag
+        self.tags = tags
         self.description = description
     }
 }
