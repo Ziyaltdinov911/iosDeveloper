@@ -13,6 +13,7 @@
 		5C66DC412B78F3C700B2B296 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C66DC402B78F3C700B2B296 /* TabBarViewController.swift */; };
 		5C66DC432B79265200B2B296 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C66DC422B79265200B2B296 /* ProductCell.swift */; };
 		5C66DC452B7955DD00B2B296 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C66DC442B7955DD00B2B296 /* ProductModel.swift */; };
+		5C66DC4D2B7A982B00B2B296 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C66DC4C2B7A982B00B2B296 /* WebViewController.swift */; };
 		5CD42FB72B4F2AED0073E1BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD42FB62B4F2AED0073E1BC /* AppDelegate.swift */; };
 		5CD42FB92B4F2AED0073E1BC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD42FB82B4F2AED0073E1BC /* SceneDelegate.swift */; };
 		5CD42FC02B4F2AEE0073E1BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CD42FBF2B4F2AEE0073E1BC /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 		5C66DC402B78F3C700B2B296 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		5C66DC422B79265200B2B296 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		5C66DC442B7955DD00B2B296 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
+		5C66DC4C2B7A982B00B2B296 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		5CD42FB32B4F2AED0073E1BC /* iOSDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CD42FB62B4F2AED0073E1BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5CD42FB82B4F2AED0073E1BC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +53,7 @@
 				5C66DC3A2B78E7B100B2B296 /* MainViewController.swift */,
 				5C66DC3C2B78E7E200B2B296 /* CatalogViewController.swift */,
 				5C66DC3E2B78E7FE00B2B296 /* CartViewController.swift */,
+				5C66DC4C2B7A982B00B2B296 /* WebViewController.swift */,
 				5C66DC402B78F3C700B2B296 /* TabBarViewController.swift */,
 			);
 			path = Controllers;
@@ -182,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C66DC3D2B78E7E200B2B296 /* CatalogViewController.swift in Sources */,
+				5C66DC4D2B7A982B00B2B296 /* WebViewController.swift in Sources */,
 				5CD42FB72B4F2AED0073E1BC /* AppDelegate.swift in Sources */,
 				5CD42FB92B4F2AED0073E1BC /* SceneDelegate.swift in Sources */,
 				5C66DC412B78F3C700B2B296 /* TabBarViewController.swift in Sources */,

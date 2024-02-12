@@ -47,7 +47,7 @@ class CatalogViewController: UIViewController {
     }
 }
 
-extension CatalogViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension CatalogViewController: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return products.count
@@ -60,10 +60,22 @@ extension CatalogViewController: UICollectionViewDelegate, UICollectionViewDataS
         return cell
     }
 
+}
+    
+extension CatalogViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let product = products[indexPath.item]
+
         if let url = URL(string: product.link) {
-            UIApplication.shared.open(url)
+            let webViewController = WebViewController()
+            webViewController.url = url
+
+//            navigationController?.pushViewController(webViewController, animated: true) - for UINAvigation
+            
+             present(webViewController, animated: true, completion: nil)
         }
     }
 }
+
+
+
