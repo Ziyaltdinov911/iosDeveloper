@@ -25,4 +25,12 @@ extension Date {
             return "\(dataDifferencesDate) дней назад"
         }
     }
+    
+    func formattDate() -> String {
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "ru")
+        formatter.dateFormat = "dd LLLL yyyy"
+        
+        return formatter.string(from: self)
+    }
 }

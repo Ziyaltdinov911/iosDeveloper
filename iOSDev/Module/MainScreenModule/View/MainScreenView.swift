@@ -14,6 +14,32 @@ protocol MainScreenViewProtocol: AnyObject {
 class MainScreenView: UIViewController {
     
     var presenter: MainScreenPresenterProtocol!
+    private var topInsets: CGFloat = 0
+    
+    private var menuViewHeight = UIApplication.topSafeArea + 70
+    
+    lazy var topMenuView: UIView = {
+        $0.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: menuViewHeight)
+        $0.backgroundColor = UIColor(named: "mainColor")
+        $0.addSubview(menuAppName)
+        $0.addSubview(settingsButton)
+        return $0
+    }(UIView())
+    
+    lazy var menuAppName: UILabel = {
+        $0.text = "SwiftPocket"
+        $0.font = UIFont.systemFont(ofSize: 30, weight: .bold)
+        $0.textColor = .white
+        $0.frame = CGRect(x: 50, y: menuViewHeight - 40, width: view.bounds.width, height: 30)
+        return $0
+    }(UILabel())
+    
+    lazy var settingsButton: UIButton = {
+        $0.frame = CGRect(x: view.bounds.width - 50, y: menuViewHeight - 35, width: 20, height: 20)
+        $0.setBackgroundImage(UIImage(systemName: "gearshape"), for: .normal)
+        $0.tintColor = .white
+        return $0
+    }(UIButton())
     
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -24,6 +50,7 @@ class MainScreenView: UIViewController {
         
         let collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: layout)
         
+        collectionView.contentInset.top = 130
         collectionView.backgroundColor = UIColor(named: "mainColor")
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -39,7 +66,9 @@ class MainScreenView: UIViewController {
 
         view.backgroundColor = UIColor(named: "mainColor")
         view.addSubview(collectionView)
+        view.addSubview(topMenuView)
         
+        topInsets = collectionView.adjustedContentInset.top
     }
 
 }
@@ -59,6 +88,11 @@ extension MainScreenView: UICollectionViewDataSource, UICollectionViewDelegate, 
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MainPostCell.reuseId, for: indexPath) as? MainPostCell
         else { return UICollectionViewCell() }
         
+        if let item = presenter.posts?[indexPath.section].items[indexPath.row] {
+            cell.configureCell(item: item)
+
+        }
+        
         cell.backgroundColor = .gray
         return cell
     }
@@ -77,6 +111,14 @@ extension MainScreenView: UICollectionViewDataSource, UICollectionViewDelegate, 
         CGSize(width: view.frame.width - 60, height: 40)
     }
     
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let menuTopPostion = scrollView.contentOffset.y + topInsets
+        
+        if menuTopPostion < 40, menuTopPostion > 0 {
+            topMenuView.frame.origin.y = -menuTopPostion
+            self.menuAppName.font = UIFont.systemFont(ofSize: 30 - menuTopPostion * 0.2, weight: .bold)
+        }
+    }
     
 }
 
