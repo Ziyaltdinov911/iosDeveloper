@@ -29,7 +29,7 @@ class NavigationHeader {
     lazy var closeButton: UIButton = getActionButton(origin: CGPoint(x: navigationView.frame.width - 30, y: 9), icon: UIImage(named: "closeIcon")!, action: backAction)
     
     lazy var menuButton: UIButton = getActionButton(origin: CGPoint(x: navigationView.frame.width - 30, y: 9), icon: UIImage(named: "menuIcon")!, action: menuAction)
-    
+     
     lazy var dateStack: UIStackView = {
         $0.axis = .vertical
         $0.alignment = .leading
