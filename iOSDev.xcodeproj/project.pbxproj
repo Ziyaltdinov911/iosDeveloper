@@ -24,6 +24,7 @@
 		5C58FB6C2B5558E200118EF1 /* MainPostHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C58FB6B2B5558E200118EF1 /* MainPostHeader.swift */; };
 		5C58FB6E2B556F2D00118EF1 /* PostItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C58FB6D2B556F2D00118EF1 /* PostItem.swift */; };
 		5C66DB822B76227000B2B296 /* Data.ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C66DB812B76227000B2B296 /* Data.ext.swift */; };
+		5CBEE99B2B88E846004E154A /* NSNotification.Name.ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBEE99A2B88E846004E154A /* NSNotification.Name.ext.swift */; };
 		5CCB9A4E2B83D88800FB1A3C /* UIApplication.ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCB9A4D2B83D88800FB1A3C /* UIApplication.ext.swift */; };
 		5CCB9A522B83EB7500FB1A3C /* TagCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCB9A512B83EB7500FB1A3C /* TagCollectionView.swift */; };
 		5CCB9A542B83ED6700FB1A3C /* TagCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCB9A532B83ED6700FB1A3C /* TagCollectionCell.swift */; };
@@ -37,6 +38,8 @@
 		5CCB9A6A2B878A7C00FB1A3C /* DetailsAddCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCB9A692B878A7C00FB1A3C /* DetailsAddCommentCell.swift */; };
 		5CCB9A6C2B878B1100FB1A3C /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCB9A6B2B878B1100FB1A3C /* File.swift */; };
 		5CCB9A6E2B8897D600FB1A3C /* DetailsMapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCB9A6D2B8897D600FB1A3C /* DetailsMapCell.swift */; };
+		5CCB9A732B88A60C00FB1A3C /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCB9A722B88A60C00FB1A3C /* PhotoView.swift */; };
+		5CCB9A772B88D9B200FB1A3C /* PhotoViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCB9A762B88D9B200FB1A3C /* PhotoViewPresenter.swift */; };
 		5CD42FB72B4F2AED0073E1BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD42FB62B4F2AED0073E1BC /* AppDelegate.swift */; };
 		5CD42FB92B4F2AED0073E1BC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD42FB82B4F2AED0073E1BC /* SceneDelegate.swift */; };
 		5CD42FC02B4F2AEE0073E1BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CD42FBF2B4F2AEE0073E1BC /* Assets.xcassets */; };
@@ -60,6 +63,7 @@
 		5C58FB6B2B5558E200118EF1 /* MainPostHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPostHeader.swift; sourceTree = "<group>"; };
 		5C58FB6D2B556F2D00118EF1 /* PostItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostItem.swift; sourceTree = "<group>"; };
 		5C66DB812B76227000B2B296 /* Data.ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.ext.swift; sourceTree = "<group>"; };
+		5CBEE99A2B88E846004E154A /* NSNotification.Name.ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNotification.Name.ext.swift; sourceTree = "<group>"; };
 		5CCB9A4D2B83D88800FB1A3C /* UIApplication.ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.ext.swift; sourceTree = "<group>"; };
 		5CCB9A512B83EB7500FB1A3C /* TagCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCollectionView.swift; sourceTree = "<group>"; };
 		5CCB9A532B83ED6700FB1A3C /* TagCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCollectionCell.swift; sourceTree = "<group>"; };
@@ -73,6 +77,8 @@
 		5CCB9A692B878A7C00FB1A3C /* DetailsAddCommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsAddCommentCell.swift; sourceTree = "<group>"; };
 		5CCB9A6B2B878B1100FB1A3C /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		5CCB9A6D2B8897D600FB1A3C /* DetailsMapCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsMapCell.swift; sourceTree = "<group>"; };
+		5CCB9A722B88A60C00FB1A3C /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
+		5CCB9A762B88D9B200FB1A3C /* PhotoViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewPresenter.swift; sourceTree = "<group>"; };
 		5CD42FB32B4F2AED0073E1BC /* iOSDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CD42FB62B4F2AED0073E1BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5CD42FB82B4F2AED0073E1BC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,8 +102,8 @@
 		5C58FB392B54081600118EF1 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				5CCB9A6F2B88A4D600FB1A3C /* PhotoViewModule */,
 				5CCB9A5A2B85027C00FB1A3C /* DetailsModule */,
-				5C58FB592B551C2000118EF1 /* CameraModule */,
 				5C58FB582B551C0C00118EF1 /* FavoriteModule */,
 				5C58FB542B55182600118EF1 /* MainScreenModule */,
 				5C58FB512B5517EE00118EF1 /* TabBarModule */,
@@ -167,6 +173,7 @@
 				5C66DB812B76227000B2B296 /* Data.ext.swift */,
 				5CCB9A4D2B83D88800FB1A3C /* UIApplication.ext.swift */,
 				5CCB9A6B2B878B1100FB1A3C /* File.swift */,
+				5CBEE99A2B88E846004E154A /* NSNotification.Name.ext.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -220,6 +227,8 @@
 				5C58FB5A2B551DAC00118EF1 /* MainScreenView.swift */,
 				5C58FB692B55589000118EF1 /* MainPostCell.swift */,
 				5C58FB6B2B5558E200118EF1 /* MainPostHeader.swift */,
+				5CCB9A722B88A60C00FB1A3C /* PhotoView.swift */,
+				5CCB9A762B88D9B200FB1A3C /* PhotoViewPresenter.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -243,6 +252,7 @@
 		5C58FB582B551C0C00118EF1 /* FavoriteModule */ = {
 			isa = PBXGroup;
 			children = (
+				5C58FB592B551C2000118EF1 /* CameraModule */,
 				5CCB9A552B848B3700FB1A3C /* Presenter */,
 				5C58FB5C2B551DB800118EF1 /* View */,
 			);
@@ -343,6 +353,29 @@
 				5CCB9A6D2B8897D600FB1A3C /* DetailsMapCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		5CCB9A6F2B88A4D600FB1A3C /* PhotoViewModule */ = {
+			isa = PBXGroup;
+			children = (
+				5CCB9A702B88A50800FB1A3C /* Presenter */,
+				5CCB9A712B88A50F00FB1A3C /* View */,
+			);
+			path = PhotoViewModule;
+			sourceTree = "<group>";
+		};
+		5CCB9A702B88A50800FB1A3C /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		5CCB9A712B88A50F00FB1A3C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		5CD42FAA2B4F2AED0073E1BC = {
@@ -456,6 +489,7 @@
 				5CCB9A662B87767300FB1A3C /* DetailsPhotoCell.swift in Sources */,
 				5CCB9A6A2B878A7C00FB1A3C /* DetailsAddCommentCell.swift in Sources */,
 				5C58FB3E2B5408FE00118EF1 /* PasscodeView.swift in Sources */,
+				5CCB9A772B88D9B200FB1A3C /* PhotoViewPresenter.swift in Sources */,
 				5C58FB6E2B556F2D00118EF1 /* PostItem.swift in Sources */,
 				5CD42FB72B4F2AED0073E1BC /* AppDelegate.swift in Sources */,
 				5CCB9A5E2B8502BF00FB1A3C /* DetailsView.swift in Sources */,
@@ -463,8 +497,10 @@
 				5CCB9A602B8502CF00FB1A3C /* DetailsViewPresenter.swift in Sources */,
 				5C58FB6C2B5558E200118EF1 /* MainPostHeader.swift in Sources */,
 				5C58FB4B2B54678000118EF1 /* KeychainManager.swift in Sources */,
+				5CBEE99B2B88E846004E154A /* NSNotification.Name.ext.swift in Sources */,
 				5C58FB502B55032700118EF1 /* StringProtocol.ext.swift in Sources */,
 				5C58FB5B2B551DAC00118EF1 /* MainScreenView.swift in Sources */,
+				5CCB9A732B88A60C00FB1A3C /* PhotoView.swift in Sources */,
 				5CCB9A682B877AB500FB1A3C /* DetailsDescriptionCell.swift in Sources */,
 				5CD42FB92B4F2AED0073E1BC /* SceneDelegate.swift in Sources */,
 				5C58FB422B54096800118EF1 /* Builder.swift in Sources */,
