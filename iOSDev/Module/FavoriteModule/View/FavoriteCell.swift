@@ -7,8 +7,9 @@
 
 import UIKit
 
-class FavoriteCell: UICollectionViewCell {
-    static let reuseID = "FavoriteCell"
+class FavoriteCell: UICollectionViewCell, CollectionViewCellProtocol {
+    
+    static let reuseId = "FavoriteCell"
     
     lazy var postImage: UIImageView = {
         $0.contentMode = .scaleAspectFill
@@ -38,7 +39,7 @@ class FavoriteCell: UICollectionViewCell {
         return $0
     }(UILabel())
     
-    override init(frame: CGRect) {
+    required override init(frame: CGRect) {
         super.init(frame: frame)
         
         [postImage, remoteInFavoriteButton, dateView].forEach {

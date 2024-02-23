@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainPostCell: UICollectionViewCell {
+class MainPostCell: UICollectionViewCell, CollectionViewCellProtocol {
     
     static let reuseId = "MainPostCell"
     private var tags: [String] = []
@@ -41,7 +41,7 @@ class MainPostCell: UICollectionViewCell {
         return $0
     }(UIButton(primaryAction: nil))
     
-    override init(frame: CGRect) {
+    required override init(frame: CGRect) {
         super.init(frame: frame)
         contentViewConfig()
     }

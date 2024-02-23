@@ -63,19 +63,41 @@ class PostItem: Identifiable{
     static func getMockItems() -> [PostItem]{
         [
             PostItem(photos: ["img1", "img2"],
+                     comments: [Commet(date: Date(),
+                                       comment: "1_It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.")],
+                     tags: ["Дом", "Nature"],
+                     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+                     isFavorite: true,
+                     date: Date()),
+            
+            PostItem(photos: ["img1", "img2"],
                      
-                     comments: [Commet(date: Date(), comment: "Lorem ipsum dolor sit amet, consectetur adipisicing elit"),
-                                Commet(date: Date(), comment: "Lorem ipsum dolor sit amet, consectetur adipisicing elit"),
-                                Commet(date: Date(), comment: "Lorem ipsum dolor sit amet, consectetur adipisicing elit"),
-                                Commet(date: Date(), comment: "Lorem ipsum dolor sit amet, consectetur adipisicing elit")],
+                     comments: [Commet(date: Date(), comment: "1_It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."),
+                                Commet(date: Date(), comment: "2_It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."),
+                                Commet(date: Date(), comment: "2_It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."),
+                                Commet(date: Date(), comment: "3_It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.")],
+                     tags: ["Дом", "Nature","Дом", "Nature","Дом", "Nature","Дом", "Nature"],
+                     description: "LoremIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                     isFavorite: true,
+                     date: Date(),
+                     location: CLLocationCoordinate2D(latitude: 40.728, longitude: -74)),
+            
+            PostItem(photos: ["img3", "img4"],
                      
-                     tags: ["Доfffffм", "Naturessss","Дом", "Naturesdfsdfsdf","Дом", "Nature","Дом", "Nature"], description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit", isFavorite: true, date: Date(), location: CLLocationCoordinate2D(latitude: 40.728, longitude: -74)),
+                     comments: [Commet(date: Date(),
+                                       comment: "1_It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.")],
+                     tags: ["Дом", "Nature"],
+                     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+                     isFavorite: true,
+                     date: Date()),
             
-            PostItem(photos: ["img2", "img3"], comments: nil, tags: ["Дом", "Nature"], description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit", isFavorite: true, date: Date()),
-            
-            PostItem(photos: ["img3", "img1"], comments: nil, tags: ["Дом", "Nature"], description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit", isFavorite: true, date: Date()),
-            
-            PostItem(photos: ["img1", "img3"], comments: nil, tags: ["Дом", "Nature"], description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit", isFavorite: true, date: Date().addingTimeInterval(-86400)),
+            PostItem(photos: ["img1", "img3"], 
+                     comments: [Commet(date: Date(),
+                                       comment: "1_It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.")],
+                     tags: ["Дом", "Nature"],
+                     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+                     isFavorite: true,
+                     date: Date()),
             
             PostItem(photos: ["img2", "img3"], comments: nil, tags: ["Дом", "Nature"], description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit", isFavorite: true, date: Date().addingTimeInterval(-86400)),
             
@@ -88,6 +110,7 @@ class PostItem: Identifiable{
         ]
     }
 }
+
 
 class Commet: Identifiable{
     let id = UUID().uuidString

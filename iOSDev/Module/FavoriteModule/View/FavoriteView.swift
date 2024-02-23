@@ -16,24 +16,23 @@ class FavoriteView: UIViewController {
     var presenter: FavoriteViewPresenterProtocol!
     
     lazy var collectionView: UICollectionView = {
+
         let itemSize = ((view.bounds.width - 60) / 2) - 15
-        
         let layout = $0.collectionViewLayout as! UICollectionViewFlowLayout
         layout.scrollDirection = .vertical
-        layout.itemSize = CGSize(width: itemSize, height: itemSize)
-        
+        layout.itemSize = CGSize(width: itemSize,
+                                 height: itemSize)
         layout.minimumLineSpacing = 30
-//        layout.minimumInteritemSpacing = 30
+        //layout.minimumInteritemSpacing = 30
         layout.sectionInset = UIEdgeInsets(top: 50, left: 30, bottom: 80, right: 30)
-        
+
         $0.showsVerticalScrollIndicator = false
         $0.dataSource = self
         $0.delegate = self
-        
         $0.alwaysBounceVertical = true
         $0.backgroundColor = UIColor(named: "mainColor")
-        $0.register(FavoriteCell.self, forCellWithReuseIdentifier: FavoriteCell.reuseID)
-        
+        $0.register(FavoriteCell.self, forCellWithReuseIdentifier: FavoriteCell.reuseId)
+
         return $0
     }(UICollectionView(frame: view.bounds, collectionViewLayout: UICollectionViewFlowLayout()))
     
@@ -66,7 +65,7 @@ extension FavoriteView: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FavoriteCell.reuseID, for: indexPath) as! FavoriteCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FavoriteCell.reuseId, for: indexPath) as! FavoriteCell
         
         if let item = presenter.post?[indexPath.item] {
             cell.configureCell(item: item)
