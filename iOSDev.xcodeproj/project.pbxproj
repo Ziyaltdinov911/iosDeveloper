@@ -26,6 +26,7 @@
 		5C66DB822B76227000B2B296 /* Data.ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C66DB812B76227000B2B296 /* Data.ext.swift */; };
 		5CBEE99B2B88E846004E154A /* NSNotification.Name.ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBEE99A2B88E846004E154A /* NSNotification.Name.ext.swift */; };
 		5CBEE9A32B88FFE7004E154A /* CameraViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBEE9A22B88FFE7004E154A /* CameraViewPresenter.swift */; };
+		5CBEE9A62B8B6032004E154A /* CameraService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBEE9A52B8B6032004E154A /* CameraService.swift */; };
 		5CCB9A4E2B83D88800FB1A3C /* UIApplication.ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCB9A4D2B83D88800FB1A3C /* UIApplication.ext.swift */; };
 		5CCB9A522B83EB7500FB1A3C /* TagCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCB9A512B83EB7500FB1A3C /* TagCollectionView.swift */; };
 		5CCB9A542B83ED6700FB1A3C /* TagCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCB9A532B83ED6700FB1A3C /* TagCollectionCell.swift */; };
@@ -66,6 +67,7 @@
 		5C66DB812B76227000B2B296 /* Data.ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.ext.swift; sourceTree = "<group>"; };
 		5CBEE99A2B88E846004E154A /* NSNotification.Name.ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNotification.Name.ext.swift; sourceTree = "<group>"; };
 		5CBEE9A22B88FFE7004E154A /* CameraViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CameraViewPresenter.swift; path = ../../../../../../CameraViewPresenter.swift; sourceTree = "<group>"; };
+		5CBEE9A52B8B6032004E154A /* CameraService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CameraService.swift; path = ../../../../../../CameraService.swift; sourceTree = "<group>"; };
 		5CCB9A4D2B83D88800FB1A3C /* UIApplication.ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.ext.swift; sourceTree = "<group>"; };
 		5CCB9A512B83EB7500FB1A3C /* TagCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCollectionView.swift; sourceTree = "<group>"; };
 		5CCB9A532B83ED6700FB1A3C /* TagCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCollectionCell.swift; sourceTree = "<group>"; };
@@ -264,6 +266,7 @@
 		5C58FB592B551C2000118EF1 /* CameraModule */ = {
 			isa = PBXGroup;
 			children = (
+				5CBEE9A42B8B601B004E154A /* CameraService */,
 				5CBEE9A12B88FFD8004E154A /* Presenter */,
 				5C58FB5D2B551DC400118EF1 /* View */,
 			);
@@ -293,6 +296,14 @@
 				5CBEE9A22B88FFE7004E154A /* CameraViewPresenter.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		5CBEE9A42B8B601B004E154A /* CameraService */ = {
+			isa = PBXGroup;
+			children = (
+				5CBEE9A52B8B6032004E154A /* CameraService.swift */,
+			);
+			path = CameraService;
 			sourceTree = "<group>";
 		};
 		5CCB9A4F2B83EB4600FB1A3C /* Helpers */ = {
@@ -502,6 +513,7 @@
 				5C58FB3E2B5408FE00118EF1 /* PasscodeView.swift in Sources */,
 				5CCB9A772B88D9B200FB1A3C /* PhotoViewPresenter.swift in Sources */,
 				5C58FB6E2B556F2D00118EF1 /* PostItem.swift in Sources */,
+				5CBEE9A62B8B6032004E154A /* CameraService.swift in Sources */,
 				5CD42FB72B4F2AED0073E1BC /* AppDelegate.swift in Sources */,
 				5CCB9A5E2B8502BF00FB1A3C /* DetailsView.swift in Sources */,
 				5C66DB822B76227000B2B296 /* Data.ext.swift in Sources */,
@@ -670,6 +682,7 @@
 				DEVELOPMENT_TEAM = UMHRFV43J3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iOSDev/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -697,6 +710,7 @@
 				DEVELOPMENT_TEAM = UMHRFV43J3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iOSDev/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

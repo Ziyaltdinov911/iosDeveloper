@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 protocol CameraViewProtocol: AnyObject {
     
@@ -61,11 +62,15 @@ class CameraView: UIViewController, CameraViewProtocol {
         return $0
     }(UIButton())
     
-    private lazy var showAction = UIAction { _ in
-        print(#function)
+    private lazy var showAction = UIAction { [weak self] _ in
+        guard let self = self else { return }
+        let photoSettings = AVCapturePhotoSettings()
+        photoSettings.flashMode = .auto
+        self.presenter.cameraService.output.capturePhoto(with: photoSettings, delegate: self)
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        presenter.cameraService.setupCaptureSession()
         navigationController?.navigationBar.isHidden = true
         
         NotificationCenter.default.post(name: .hideTabBar, object: nil, userInfo: ["isHide": true])
@@ -73,6 +78,8 @@ class CameraView: UIViewController, CameraViewProtocol {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        checkPermissions()
+        setupPreviewLayer()
         
         view.backgroundColor = .gray
         view.addSubview(shotsCollectionView)
@@ -81,19 +88,77 @@ class CameraView: UIViewController, CameraViewProtocol {
         view.addSubview(switchCameraBtn)
         view.addSubview(nextBtn)
     }
+    
+    private func checkPermissions() {
+        let cameraStatusAuth = AVCaptureDevice.authorizationStatus(for: .video)
+        
+        switch cameraStatusAuth {
+            
+        case .notDetermined:
+            AVCaptureDevice.requestAccess(for: .video) { auth in
+                if !auth {
+                    abort()
+                }
+            }
+        case .restricted, .denied:
+            abort()
+        case .authorized:
+            return
+        default:
+            fatalError()
+        }
+    }
+    
+    private func setupPreviewLayer() {
+        let previewLayer = AVCaptureVideoPreviewLayer(session: presenter.cameraService.captureSession)
+        
+        previewLayer.frame = view.bounds
+        previewLayer.videoGravity = .resizeAspectFill
+        view.layer.addSublayer(previewLayer)
+    }
+    
+    private func getImageView(image: UIImage) -> UIImageView {
+        let imageView = UIImageView()
+        imageView.frame.size = CGSize(width: 60, height: 60)
+        imageView.image = image
+        imageView.contentMode = .scaleAspectFill
+        imageView.layer.cornerRadius = 10
+        imageView.clipsToBounds = true
+        
+        return imageView
+    }
 
+}
+
+extension CameraView: AVCapturePhotoCaptureDelegate {
+    
+    func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
+        guard error == nil else {
+            print(error?.localizedDescription)
+            return
+        }
+        
+        guard let imageDate = photo.fileDataRepresentation() else { return }
+        
+        if let image = UIImage(data: imageDate) {
+            presenter.photos.append(image)
+            self.shotsCollectionView.reloadData()
+        }
+    }
 }
 
 extension CameraView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        15
-//        presenter.photos.count
+        presenter.photos.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "shotCell", for: indexPath)
         
-        cell.backgroundColor = .green
+        let photo = presenter.photos[indexPath.item]
+        let imageView = self.getImageView(image: photo)
+        cell.addSubview(imageView)
+        
         return cell
     }
     
