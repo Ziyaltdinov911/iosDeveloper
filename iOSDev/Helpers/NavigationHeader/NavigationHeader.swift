@@ -47,11 +47,11 @@ class NavigationHeader {
     
     func getNavigationHeader(type: NavigationHeaderType) -> UIView {
         switch type {
-        case .back:
+        case .detailsView:
             navigationView.addSubview(backButton)
             navigationView.addSubview(menuButton)
-        case .close:
-            navigationView.addSubview(closeButton)
+        case .addPostView:
+            navigationView.addSubview(backButton)
         }
         
         return navigationView
@@ -79,5 +79,5 @@ class NavigationHeader {
 }
 
 enum NavigationHeaderType {
-    case back, close
+    case detailsView, addPostView
 }

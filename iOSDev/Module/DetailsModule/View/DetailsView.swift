@@ -15,6 +15,7 @@ class DetailsView: UIViewController {
     
     var presenter: DetailsViewPresenterProtocol!
     var photoView: PhotoView!
+    
     private var menuViewHeight = UIApplication.topSafeArea + 50
     
     lazy var topMenuView: UIView = {
@@ -69,7 +70,7 @@ class DetailsView: UIViewController {
     }
     
     private func setupPageHeader() {
-        let headerView = navigationHeader.getNavigationHeader(type: .back)
+        let headerView = navigationHeader.getNavigationHeader(type: .detailsView)
         headerView.frame.origin.y = UIApplication.topSafeArea
         
         view.addSubview(headerView)
@@ -195,6 +196,7 @@ extension DetailsView: UICollectionViewDataSource{
             case 1:
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TagCollectionCell.reuseId, for: indexPath) as! TagCollectionCell
                 cell.cellConfigure(tagText: item.tags?[indexPath.item] ?? "")
+                
                 return cell
             case 2,3:
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DetailsDescriptionCell.reuseId, for: indexPath) as! DetailsDescriptionCell
@@ -211,24 +213,18 @@ extension DetailsView: UICollectionViewDataSource{
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DetailsAddCommentCell.reuseId, for: indexPath) as! DetailsAddCommentCell
 
                 cell.completion = { [weak self] comment in
-                    guard let self = self else { return }
+                    guard let _ = self else { return }
                     print(comment)
                 }
                 return cell
+                
             case 5:
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DetailsMapCell.reuseId, for: indexPath) as! DetailsMapCell
-                if let coordinate = item.location {
-                    cell.configureCell(coordinate: coordinate)
-                } else {
-                    // Обработка случая, когда координаты отсутствуют
-                    // Например, скрытие метки на карте или вывод сообщения
+                if item.location != nil {
+                    cell.configureCell(coordinate: item.location)
                 }
                 return cell
 
-            case 5:
-                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DetailsMapCell.reuseId, for: indexPath) as! DetailsMapCell
-                cell.configureCell(coordinate: item.location)
-                return cell
             default:
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
                 cell.backgroundColor = .red

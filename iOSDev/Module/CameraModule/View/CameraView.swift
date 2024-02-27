@@ -134,7 +134,7 @@ extension CameraView: AVCapturePhotoCaptureDelegate {
     
     func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
         guard error == nil else {
-            print(error?.localizedDescription)
+            print(error!.localizedDescription)
             return
         }
         
