@@ -8,28 +8,22 @@
 import UIKit
 
 protocol BuilderProtocol {
-    static func getPasscodeController(passcodeState: PasscodeState, sceneDelegate: SceneDelegateProtocol) -> UIViewController
+    static func getPasscodeController(passcodeState: PasscodeState, sceneDelegate: SceneDelegateProtocol, isSettings: Bool) -> UIViewController
     static func createTabBarController() -> UIViewController
-    
-    //VC
-    
     static func createMainScreenController() -> UIViewController
     static func createCameraScreenController() -> UIViewController
     static func createFavoriteScreenController() -> UIViewController
-
-
 }
 
 class Builder: BuilderProtocol {
-    static func getPasscodeController(passcodeState: PasscodeState, sceneDelegate: SceneDelegateProtocol) -> UIViewController {
+    static func getPasscodeController(passcodeState: PasscodeState, sceneDelegate: SceneDelegateProtocol, isSettings: Bool) -> UIViewController {
         let passcodeView = PasscodeView()
         let keychainManager = KeychainManager()
 
-        let presenter = PasscodePresenter(view: passcodeView, passcodeState: passcodeState, keychainManager: keychainManager, sceneDelegate: sceneDelegate)
+        let presenter = PasscodePresenter(view: passcodeView, passcodeState: passcodeState, keychainManager: keychainManager, sceneDelegate: sceneDelegate, isSettings: isSettings)
         
         passcodeView.passcodePresenter = presenter
         return passcodeView
-        
     }
     
     static func createTabBarController() -> UIViewController {
@@ -92,6 +86,16 @@ class Builder: BuilderProtocol {
         addPostView.presenter = presenter
         
         return addPostView
+    }
+    
+    static func createSettingsViewController() -> UIViewController {
+        
+        let settingsView = SettingsView()
+        let presenter = SettingsViewPresenter(view: settingsView)
+        
+        settingsView.presenter = presenter
+        
+        return UINavigationController(rootViewController: settingsView)
     }
     
 }

@@ -59,9 +59,9 @@ class TabBarView: UITabBarController {
 
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        selectedIndex = 2
-    }
+//    override func viewDidAppear(_ animated: Bool) {
+//        selectedIndex = 2
+//    }
     
     lazy var selectedItem = UIAction { [weak self] sender in
         guard

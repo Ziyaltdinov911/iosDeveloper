@@ -63,6 +63,8 @@ class PasscodeView: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = UIColor(named: "mainColor")
         
+        NotificationCenter.default.addObserver(self, selector: #selector(dismissPasscodeView), name: .dismissPasscode, object: nil)
+        
         [keyboardStack, passcodeTitle, codeStack, deleteBtn].forEach {
             view.addSubview($0)
             
@@ -100,7 +102,12 @@ class PasscodeView: UIViewController {
         ])
         
     }
+    
+    @objc func dismissPasscodeView() {
+        dismiss(animated: true)
+    }
 }
+
 
 extension PasscodeView {
     private func getHorizontalNumStack() -> UIStackView {

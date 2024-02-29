@@ -19,17 +19,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     private var keychainManager = KeychainManager()
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+        
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: scene)
-        let imageArray: [UIImage] = [UIImage(named: "img1")!, UIImage(named: "img2")!, UIImage(named: "img3")!]
-        window?.rootViewController =
-        Builder.createAddPostViewController(photos: imageArray)
-        //Builder.getPasscodeController(passcodeState: checkIssetPasscode(), sceneDelegate: self)
-        //Builder.createTabBarController()
-        //Builder.getPasscodeController(passcodeState: checkIssetPasscode(), sceneDelegate: self)
+        window?.rootViewController = Builder.getPasscodeController(passcodeState: checkIssetPasscode(), sceneDelegate: self, isSettings: false)
         window?.makeKeyAndVisible()
     }
 

@@ -39,7 +39,12 @@ class MainScreenView: UIViewController {
         $0.setBackgroundImage(UIImage(systemName: "gearshape"), for: .normal)
         $0.tintColor = .white
         return $0
-    }(UIButton())
+    }(UIButton(primaryAction: settingsButtonAction))
+    
+    lazy var settingsButtonAction = UIAction { [weak self] _ in
+        let settingsVC = Builder.createSettingsViewController()
+        self?.present(settingsVC, animated: true)
+    }
     
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()

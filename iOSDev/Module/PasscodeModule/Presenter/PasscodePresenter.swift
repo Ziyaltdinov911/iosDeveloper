@@ -8,6 +8,7 @@
 import UIKit
 
 protocol PassscodePresenterProtocol: AnyObject {
+    var isSettings: Bool { get set }
     var passcode: [Int] { get set }
     var templatePasscode: [Int]? { get set }
     
@@ -17,12 +18,14 @@ protocol PassscodePresenterProtocol: AnyObject {
     func checkPasscode()
     func clearPasscode(state: PasscodeState)
     
-    init(view: PasscodeViewProtocol, passcodeState: PasscodeState, keychainManager: KeychainManagerProtocol, sceneDelegate: SceneDelegateProtocol)
+    init(view: PasscodeViewProtocol, passcodeState: PasscodeState, keychainManager: KeychainManagerProtocol, sceneDelegate: SceneDelegateProtocol?, isSettings: Bool)
 }
 
 
 
 class PasscodePresenter: PassscodePresenterProtocol {
+    var isSettings: Bool
+    
     var templatePasscode: [Int]?
     
     var passcode: [Int] = [] {
@@ -44,13 +47,14 @@ class PasscodePresenter: PassscodePresenterProtocol {
     
     var passcodeState: PasscodeState
     var keychainManager: KeychainManagerProtocol
-    var sceneDelegate: SceneDelegateProtocol
+    var sceneDelegate: SceneDelegateProtocol?
     
-    required init(view: PasscodeViewProtocol, passcodeState: PasscodeState, keychainManager: KeychainManagerProtocol, sceneDelegate: SceneDelegateProtocol) {
+    required init(view: PasscodeViewProtocol, passcodeState: PasscodeState, keychainManager: KeychainManagerProtocol, sceneDelegate: SceneDelegateProtocol?, isSettings: Bool) {
         self.view = view
         self.passcodeState = passcodeState
         self.keychainManager = keychainManager
         self.sceneDelegate = sceneDelegate
+        self.isSettings = true
 
         view.passcodeState(state: passcodeState)
         
@@ -76,7 +80,18 @@ class PasscodePresenter: PassscodePresenterProtocol {
                 
                 let stringPasscode = passcode.map { String($0) }.joined()
                 keychainManager.save(key: KeychainKeys.passcode.rawValue, value: stringPasscode)
-                self.sceneDelegate.startMainScreen()
+                
+                if isSettings {
+                    //dismiss
+                    print("dismiss")
+                    NotificationCenter.default.post(name: .dismissPasscode, object: nil)
+                } else {
+                    passcodeState = .inputPasscode
+                    self.clearPasscode(state: .inputPasscode)
+                }
+                
+                passcodeState = .inputPasscode
+                self.sceneDelegate?.startMainScreen()
                 
             } else {
                 self.view?.passcodeState(state: .codeMismatch)
@@ -93,7 +108,7 @@ class PasscodePresenter: PassscodePresenterProtocol {
             
         case .success(let code):
             if self.passcode == code.digits {
-                self.sceneDelegate.startMainScreen()
+                self.sceneDelegate?.startMainScreen()
             } else {
                 self.clearPasscode(state: .wrongPasscode)
             }
