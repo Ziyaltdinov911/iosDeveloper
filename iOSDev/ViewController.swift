@@ -2,18 +2,36 @@
 //  ViewController.swift
 //  iOSDev
 //
-//  Created by Камиль Байдиев on 11.01.2024.
+//  Created by Камиль Байдиев on 02.03.2024.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, NetworkManagerDelegate {
+    
+    private let networkManager = NetworkManager()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view. 
+        
+        view.backgroundColor = .white
+        networkManager.delegate = self
+        networkManager.getNews(q: "iOS", lang: "ru")
+        
     }
-
-
-}
-
+    
+    func dataSuccessfull(totalResults: Int) {
+            DispatchQueue.main.async {
+                if totalResults > 0 {
+                    self.view.backgroundColor = .green
+                } else {
+                    self.view.backgroundColor = .red
+                }
+            }
+        }
+        
+        func dataFail(error: Error) {
+            print("Error: \(error.localizedDescription)")
+        }
+    }
