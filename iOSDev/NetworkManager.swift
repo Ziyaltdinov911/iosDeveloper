@@ -80,7 +80,7 @@ class NetworkManager {
                    } catch {
                        print("Ошибка при декодировании JSON: \(error)")
                    }
-            
+             
         }.resume()
         
     }
