@@ -63,9 +63,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         textField.textAlignment = .left
         textField.layer.cornerRadius = 25
         textField.placeholder = placeholder
-        textField.textColor = .black // Цвет текста
+        textField.textColor = .black
         
-        // Цвет для placeholder
         textField.attributedPlaceholder = NSAttributedString(
             string: placeholder,
             attributes: [NSAttributedString.Key.foregroundColor: UIColor(red: 164/255, green: 164/255, blue: 164/255, alpha: 1)]
@@ -146,7 +145,6 @@ struct ViewControllerWrapper: UIViewControllerRepresentable {
     }
 
     func updateUIViewController(_ uiViewController: ViewController, context: Context) {
-        // Update code if needed
     }
 }
 
@@ -156,11 +154,10 @@ struct ContentView: View {
     }
 }
 
-//if DEBUG
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
 }
-//endif
+
   
