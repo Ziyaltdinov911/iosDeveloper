@@ -6,14 +6,30 @@
 //
 
 import UIKit
+import RealmSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        let config = Realm.Configuration(
+            fileURL: FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("default.realm"),
+            schemaVersion: 1,
+
+            migrationBlock: { migration, oldSchemaVersion in
+                if (oldSchemaVersion < 1) {
+                }
+            })
+
+        Realm.Configuration.defaultConfiguration = config
+        
+        // Цвет фона навигационного бара для всего приложения
+         UINavigationBar.appearance().barTintColor = .systemGray
+         
+        // Цвет элементов навигационного бара для всего приложения (текста, кнопок)
+         UINavigationBar.appearance().tintColor = .white
+        
         return true
     }
 
