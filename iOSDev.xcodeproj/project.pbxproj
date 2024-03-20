@@ -7,20 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C30BD2A2BAAADCC00ACE088 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 5C30BD292BAAADCC00ACE088 /* Realm */; };
+		5C30BD2C2BAAADCC00ACE088 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5C30BD2B2BAAADCC00ACE088 /* RealmSwift */; };
+		5C30BD2F2BAAADEC00ACE088 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 5C30BD2E2BAAADEC00ACE088 /* SDWebImage */; };
+		5C30BD312BAAADEC00ACE088 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5C30BD302BAAADEC00ACE088 /* SDWebImageMapKit */; };
+		5C30BD342BAAAE1F00ACE088 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 5C30BD332BAAAE1F00ACE088 /* Alamofire */; };
+		5C30BD362BAAAE1F00ACE088 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 5C30BD352BAAAE1F00ACE088 /* AlamofireDynamic */; };
+		5C30BD382BAAAEBD00ACE088 /* FavoriteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C30BD372BAAAEBD00ACE088 /* FavoriteManager.swift */; };
+		5C30BD3A2BAAAEE000ACE088 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C30BD392BAAAEE000ACE088 /* NetworkManager.swift */; };
+		5C30BD3C2BAAAF1A00ACE088 /* Controller.ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C30BD3B2BAAAF1A00ACE088 /* Controller.ext.swift */; };
+		5C30BD3E2BAAAFDE00ACE088 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C30BD3D2BAAAFDE00ACE088 /* FavoritesViewController.swift */; };
+		5C30BD402BAAB02900ACE088 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C30BD3F2BAAB02900ACE088 /* PhotoCell.swift */; };
+		5C30BD422BAAB09100ACE088 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C30BD412BAAB09100ACE088 /* Note.swift */; };
 		5CD42FB72B4F2AED0073E1BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD42FB62B4F2AED0073E1BC /* AppDelegate.swift */; };
 		5CD42FB92B4F2AED0073E1BC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD42FB82B4F2AED0073E1BC /* SceneDelegate.swift */; };
 		5CD42FBB2B4F2AED0073E1BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD42FBA2B4F2AED0073E1BC /* ViewController.swift */; };
-		5CD42FBE2B4F2AED0073E1BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CD42FBC2B4F2AED0073E1BC /* Main.storyboard */; };
 		5CD42FC02B4F2AEE0073E1BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CD42FBF2B4F2AEE0073E1BC /* Assets.xcassets */; };
 		5CD42FC32B4F2AEE0073E1BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CD42FC12B4F2AEE0073E1BC /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5C30BD372BAAAEBD00ACE088 /* FavoriteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteManager.swift; sourceTree = "<group>"; };
+		5C30BD392BAAAEE000ACE088 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		5C30BD3B2BAAAF1A00ACE088 /* Controller.ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.ext.swift; sourceTree = "<group>"; };
+		5C30BD3D2BAAAFDE00ACE088 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		5C30BD3F2BAAB02900ACE088 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		5C30BD412BAAB09100ACE088 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		5CD42FB32B4F2AED0073E1BC /* iOSDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CD42FB62B4F2AED0073E1BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5CD42FB82B4F2AED0073E1BC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		5CD42FBA2B4F2AED0073E1BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5CD42FBD2B4F2AED0073E1BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5CD42FBF2B4F2AEE0073E1BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5CD42FC22B4F2AEE0073E1BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5CD42FC42B4F2AEE0073E1BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -31,6 +47,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C30BD342BAAAE1F00ACE088 /* Alamofire in Frameworks */,
+				5C30BD362BAAAE1F00ACE088 /* AlamofireDynamic in Frameworks */,
+				5C30BD2F2BAAADEC00ACE088 /* SDWebImage in Frameworks */,
+				5C30BD2C2BAAADCC00ACE088 /* RealmSwift in Frameworks */,
+				5C30BD312BAAADEC00ACE088 /* SDWebImageMapKit in Frameworks */,
+				5C30BD2A2BAAADCC00ACE088 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +78,60 @@
 		5CD42FB52B4F2AED0073E1BC /* iOSDev */ = {
 			isa = PBXGroup;
 			children = (
-				5CD42FB62B4F2AED0073E1BC /* AppDelegate.swift */,
-				5CD42FB82B4F2AED0073E1BC /* SceneDelegate.swift */,
-				5CD42FBA2B4F2AED0073E1BC /* ViewController.swift */,
-				5CD42FBC2B4F2AED0073E1BC /* Main.storyboard */,
+				5CE149522BAAF511001E4CB8 /* Model */,
+				5CE149512BAAF507001E4CB8 /* View */,
+				5CE149502BAAF4F9001E4CB8 /* Controllers */,
+				5CE149542BAAF5EF001E4CB8 /* Common */,
 				5CD42FBF2B4F2AEE0073E1BC /* Assets.xcassets */,
 				5CD42FC12B4F2AEE0073E1BC /* LaunchScreen.storyboard */,
 				5CD42FC42B4F2AEE0073E1BC /* Info.plist */,
 			);
 			path = iOSDev;
+			sourceTree = "<group>";
+		};
+		5CE149502BAAF4F9001E4CB8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5CE149532BAAF5C4001E4CB8 /* Extensions */,
+				5CD42FBA2B4F2AED0073E1BC /* ViewController.swift */,
+				5C30BD3D2BAAAFDE00ACE088 /* FavoritesViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5CE149512BAAF507001E4CB8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5CE149522BAAF511001E4CB8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5C30BD372BAAAEBD00ACE088 /* FavoriteManager.swift */,
+				5C30BD392BAAAEE000ACE088 /* NetworkManager.swift */,
+				5C30BD3F2BAAB02900ACE088 /* PhotoCell.swift */,
+				5C30BD412BAAB09100ACE088 /* Note.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5CE149532BAAF5C4001E4CB8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5C30BD3B2BAAAF1A00ACE088 /* Controller.ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5CE149542BAAF5EF001E4CB8 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				5CD42FB62B4F2AED0073E1BC /* AppDelegate.swift */,
+				5CD42FB82B4F2AED0073E1BC /* SceneDelegate.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +150,14 @@
 			dependencies = (
 			);
 			name = iOSDev;
+			packageProductDependencies = (
+				5C30BD292BAAADCC00ACE088 /* Realm */,
+				5C30BD2B2BAAADCC00ACE088 /* RealmSwift */,
+				5C30BD2E2BAAADEC00ACE088 /* SDWebImage */,
+				5C30BD302BAAADEC00ACE088 /* SDWebImageMapKit */,
+				5C30BD332BAAAE1F00ACE088 /* Alamofire */,
+				5C30BD352BAAAE1F00ACE088 /* AlamofireDynamic */,
+			);
 			productName = iOSDev;
 			productReference = 5CD42FB32B4F2AED0073E1BC /* iOSDev.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +186,11 @@
 				Base,
 			);
 			mainGroup = 5CD42FAA2B4F2AED0073E1BC;
+			packageReferences = (
+				5C30BD282BAAADCC00ACE088 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				5C30BD2D2BAAADEC00ACE088 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				5C30BD322BAAAE1F00ACE088 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 5CD42FB42B4F2AED0073E1BC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +207,6 @@
 			files = (
 				5CD42FC32B4F2AEE0073E1BC /* LaunchScreen.storyboard in Resources */,
 				5CD42FC02B4F2AEE0073E1BC /* Assets.xcassets in Resources */,
-				5CD42FBE2B4F2AED0073E1BC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,21 +219,19 @@
 			files = (
 				5CD42FBB2B4F2AED0073E1BC /* ViewController.swift in Sources */,
 				5CD42FB72B4F2AED0073E1BC /* AppDelegate.swift in Sources */,
+				5C30BD3E2BAAAFDE00ACE088 /* FavoritesViewController.swift in Sources */,
+				5C30BD3A2BAAAEE000ACE088 /* NetworkManager.swift in Sources */,
+				5C30BD402BAAB02900ACE088 /* PhotoCell.swift in Sources */,
+				5C30BD422BAAB09100ACE088 /* Note.swift in Sources */,
 				5CD42FB92B4F2AED0073E1BC /* SceneDelegate.swift in Sources */,
+				5C30BD3C2BAAAF1A00ACE088 /* Controller.ext.swift in Sources */,
+				5C30BD382BAAAEBD00ACE088 /* FavoriteManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		5CD42FBC2B4F2AED0073E1BC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5CD42FBD2B4F2AED0073E1BC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5CD42FC12B4F2AEE0073E1BC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,7 +369,6 @@
 				INFOPLIST_FILE = iOSDev/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -320,7 +396,6 @@
 				INFOPLIST_FILE = iOSDev/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -358,6 +433,66 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5C30BD282BAAADCC00ACE088 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		5C30BD2D2BAAADEC00ACE088 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage?ysclid=ltpopvugg6234435386";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.19.0;
+			};
+		};
+		5C30BD322BAAAE1F00ACE088 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire?ysclid=ltvj77mgru452431023";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5C30BD292BAAADCC00ACE088 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5C30BD282BAAADCC00ACE088 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		5C30BD2B2BAAADCC00ACE088 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5C30BD282BAAADCC00ACE088 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+		5C30BD2E2BAAADEC00ACE088 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5C30BD2D2BAAADEC00ACE088 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		5C30BD302BAAADEC00ACE088 /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5C30BD2D2BAAADEC00ACE088 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
+		};
+		5C30BD332BAAAE1F00ACE088 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5C30BD322BAAAE1F00ACE088 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		5C30BD352BAAAE1F00ACE088 /* AlamofireDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5C30BD322BAAAE1F00ACE088 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = AlamofireDynamic;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5CD42FAB2B4F2AED0073E1BC /* Project object */;
 }
