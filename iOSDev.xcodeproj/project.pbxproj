@@ -7,20 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C0E23FF2BB30C710071A39F /* AddNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0E23FE2BB30C710071A39F /* AddNoteViewController.swift */; };
+		5C0E24042BB30C7F0071A39F /* DataBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0E24002BB30C7F0071A39F /* DataBaseManager.swift */; };
+		5C0E24052BB30C7F0071A39F /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0E24012BB30C7F0071A39F /* Note.swift */; };
+		5C0E24062BB30C7F0071A39F /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0E24022BB30C7F0071A39F /* StorageManager.swift */; };
+		5C0E240A2BB30CB70071A39F /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 5C0E24092BB30CB70071A39F /* Alamofire */; };
+		5C0E240C2BB30CB70071A39F /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 5C0E240B2BB30CB70071A39F /* AlamofireDynamic */; };
+		5CAEB7ED2BB465710009F06D /* Controllers.ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAEB7EC2BB465710009F06D /* Controllers.ext.swift */; };
+		5CBB52222BB3126500224F6C /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 5CBB52212BB3126500224F6C /* Realm */; };
+		5CBB52242BB3126500224F6C /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5CBB52232BB3126500224F6C /* RealmSwift */; };
 		5CD42FB72B4F2AED0073E1BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD42FB62B4F2AED0073E1BC /* AppDelegate.swift */; };
 		5CD42FB92B4F2AED0073E1BC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD42FB82B4F2AED0073E1BC /* SceneDelegate.swift */; };
 		5CD42FBB2B4F2AED0073E1BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD42FBA2B4F2AED0073E1BC /* ViewController.swift */; };
-		5CD42FBE2B4F2AED0073E1BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CD42FBC2B4F2AED0073E1BC /* Main.storyboard */; };
 		5CD42FC02B4F2AEE0073E1BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CD42FBF2B4F2AEE0073E1BC /* Assets.xcassets */; };
 		5CD42FC32B4F2AEE0073E1BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CD42FC12B4F2AEE0073E1BC /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5C0E23FE2BB30C710071A39F /* AddNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNoteViewController.swift; sourceTree = "<group>"; };
+		5C0E24002BB30C7F0071A39F /* DataBaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBaseManager.swift; sourceTree = "<group>"; };
+		5C0E24012BB30C7F0071A39F /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		5C0E24022BB30C7F0071A39F /* StorageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		5CAEB7EC2BB465710009F06D /* Controllers.ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controllers.ext.swift; sourceTree = "<group>"; };
 		5CD42FB32B4F2AED0073E1BC /* iOSDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CD42FB62B4F2AED0073E1BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5CD42FB82B4F2AED0073E1BC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		5CD42FBA2B4F2AED0073E1BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5CD42FBD2B4F2AED0073E1BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5CD42FBF2B4F2AEE0073E1BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5CD42FC22B4F2AEE0073E1BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5CD42FC42B4F2AEE0073E1BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -31,12 +43,44 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C0E240A2BB30CB70071A39F /* Alamofire in Frameworks */,
+				5CBB52222BB3126500224F6C /* Realm in Frameworks */,
+				5CBB52242BB3126500224F6C /* RealmSwift in Frameworks */,
+				5C0E240C2BB30CB70071A39F /* AlamofireDynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C0E24032BB30C7F0071A39F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5C0E24002BB30C7F0071A39F /* DataBaseManager.swift */,
+				5C0E24012BB30C7F0071A39F /* Note.swift */,
+				5C0E24022BB30C7F0071A39F /* StorageManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5C0E24072BB30C880071A39F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5CAEB7EB2BB465590009F06D /* Extensions */,
+				5CD42FBA2B4F2AED0073E1BC /* ViewController.swift */,
+				5C0E23FE2BB30C710071A39F /* AddNoteViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5CAEB7EB2BB465590009F06D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5CAEB7EC2BB465710009F06D /* Controllers.ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		5CD42FAA2B4F2AED0073E1BC = {
 			isa = PBXGroup;
 			children = (
@@ -58,8 +102,8 @@
 			children = (
 				5CD42FB62B4F2AED0073E1BC /* AppDelegate.swift */,
 				5CD42FB82B4F2AED0073E1BC /* SceneDelegate.swift */,
-				5CD42FBA2B4F2AED0073E1BC /* ViewController.swift */,
-				5CD42FBC2B4F2AED0073E1BC /* Main.storyboard */,
+				5C0E24072BB30C880071A39F /* Controller */,
+				5C0E24032BB30C7F0071A39F /* Model */,
 				5CD42FBF2B4F2AEE0073E1BC /* Assets.xcassets */,
 				5CD42FC12B4F2AEE0073E1BC /* LaunchScreen.storyboard */,
 				5CD42FC42B4F2AEE0073E1BC /* Info.plist */,
@@ -83,6 +127,12 @@
 			dependencies = (
 			);
 			name = iOSDev;
+			packageProductDependencies = (
+				5C0E24092BB30CB70071A39F /* Alamofire */,
+				5C0E240B2BB30CB70071A39F /* AlamofireDynamic */,
+				5CBB52212BB3126500224F6C /* Realm */,
+				5CBB52232BB3126500224F6C /* RealmSwift */,
+			);
 			productName = iOSDev;
 			productReference = 5CD42FB32B4F2AED0073E1BC /* iOSDev.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +161,10 @@
 				Base,
 			);
 			mainGroup = 5CD42FAA2B4F2AED0073E1BC;
+			packageReferences = (
+				5C0E24082BB30CB70071A39F /* XCRemoteSwiftPackageReference "Alamofire" */,
+				5CBB521D2BB3114100224F6C /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = 5CD42FB42B4F2AED0073E1BC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +181,6 @@
 			files = (
 				5CD42FC32B4F2AEE0073E1BC /* LaunchScreen.storyboard in Resources */,
 				5CD42FC02B4F2AEE0073E1BC /* Assets.xcassets in Resources */,
-				5CD42FBE2B4F2AED0073E1BC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +191,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C0E23FF2BB30C710071A39F /* AddNoteViewController.swift in Sources */,
 				5CD42FBB2B4F2AED0073E1BC /* ViewController.swift in Sources */,
 				5CD42FB72B4F2AED0073E1BC /* AppDelegate.swift in Sources */,
+				5C0E24062BB30C7F0071A39F /* StorageManager.swift in Sources */,
 				5CD42FB92B4F2AED0073E1BC /* SceneDelegate.swift in Sources */,
+				5C0E24042BB30C7F0071A39F /* DataBaseManager.swift in Sources */,
+				5CAEB7ED2BB465710009F06D /* Controllers.ext.swift in Sources */,
+				5C0E24052BB30C7F0071A39F /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		5CD42FBC2B4F2AED0073E1BC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5CD42FBD2B4F2AED0073E1BC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5CD42FC12B4F2AEE0073E1BC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,7 +342,6 @@
 				INFOPLIST_FILE = iOSDev/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -320,7 +369,6 @@
 				INFOPLIST_FILE = iOSDev/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -358,6 +406,48 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5C0E24082BB30CB70071A39F /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire?ysclid=ltrf87dbh3374626389";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.0;
+			};
+		};
+		5CBB521D2BB3114100224F6C /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5C0E24092BB30CB70071A39F /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5C0E24082BB30CB70071A39F /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		5C0E240B2BB30CB70071A39F /* AlamofireDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5C0E24082BB30CB70071A39F /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = AlamofireDynamic;
+		};
+		5CBB52212BB3126500224F6C /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5CBB521D2BB3114100224F6C /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		5CBB52232BB3126500224F6C /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5CBB521D2BB3114100224F6C /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5CD42FAB2B4F2AED0073E1BC /* Project object */;
 }
